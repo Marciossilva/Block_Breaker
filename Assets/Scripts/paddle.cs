@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class paddle : MonoBehaviour {
+public class Paddle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

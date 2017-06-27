@@ -7,13 +7,13 @@ public class looseCollider : MonoBehaviour {
 	public LevelManager levelManager;
 	// Use this for initialization
 	void OnTriggerEnter2D(Collider2D trigger){
-		print ("passou");
+
 
 		levelManager.LoadLevel ("Lose");
 	}
 
 	void OnCollisionEnter2D(Collision2D collision){
 	
-		Debug.Log ("bateu");
+
 	}
 }
