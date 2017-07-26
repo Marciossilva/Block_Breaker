@@ -5,7 +5,7 @@ using UnityEngine;
 public class Brick : MonoBehaviour {
 
 	public int maxHits;
-	public int timesHit;
+	private int timesHit;
 
 	// Use this for initialization
 
