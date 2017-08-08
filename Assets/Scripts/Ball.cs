@@ -23,7 +23,7 @@ public class Ball : MonoBehaviour {
 			// esperando clicar no mouse.
 			if (Input.GetMouseButtonDown (0)) {
 				hasStarted = true;
-				print ("mouse Clicked");
+
 				this.GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 10f);
 			}
 		}
