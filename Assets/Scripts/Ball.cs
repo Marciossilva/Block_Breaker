@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 using UnityEngine;
 
 public class Ball : MonoBehaviour {
+
+	public AudioClip impact;
+	AudioSource audioSource;
 
 	private Paddle paddle;
 	private bool hasStarted;
@@ -12,8 +16,7 @@ public class Ball : MonoBehaviour {
 	void Start () {
 		paddle = GameObject.FindObjectOfType<Paddle>();
 		paddleToBallVector = this.transform.position - paddle.transform.position;
-
-
+;
 	}
 	// Update is called once per frame
 	void Update () {
@@ -26,6 +29,13 @@ public class Ball : MonoBehaviour {
 
 				this.GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 10f);
 			}
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D collision){
+		if (hasStarted) {
+			AudioSource audio = GetComponent<AudioSource>();
+			audio.Play();
 		}
 	}
 }
