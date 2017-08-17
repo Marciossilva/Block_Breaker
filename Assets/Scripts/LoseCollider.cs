@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class looseCollider : MonoBehaviour {
+public class LoseCollider : MonoBehaviour {
 
 	private LevelManager levelManager;
 	// Use this for initialization
